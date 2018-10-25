@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="MusicBox.View.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicBox.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush ImageSource="/Assets/BackgroundLogin.jpg"/>
+    </Page.Background>
+
+    <Frame x:ConnectionId='2' x:Name="FrameSignin" Height="1218"  VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="4,-9,3,0">
+        <ScrollViewer x:ConnectionId='3' HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Height="850" VerticalAlignment="Top"                                       >
+            <StackPanel  Height="1218" HorizontalAlignment="Center" Width="805">
+
+                <TextBlock x:ConnectionId='4' FontSize="60" Text="Well Come To Signup" Margin="0,10,0,5" TextWrapping="Wrap" Height="85"                                               HorizontalAlignment="Center"/>
+
+                <RelativePanel HorizontalAlignment="Right">
+                    <TextBox x:ConnectionId='26'  x:Name="Email" Margin="0, 10, 0, 0" Header="Email" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" Width="293"/>
+                    <TextBlock x:ConnectionId='27'  x:Name="email" Foreground="red" RelativePanel.Below="Email"/>
+                </RelativePanel>
+                <RelativePanel HorizontalAlignment="Right">
+                    <PasswordBox x:ConnectionId='24' x:Name="Password" Margin="0, 30, 0, 0" Header="Password" Width="293" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <TextBlock x:ConnectionId='25' x:Name="password" Foreground="red" RelativePanel.Below="Password"/>
+                </RelativePanel>
+                <RelativePanel Width="800" HorizontalAlignment="Stretch" Height="328" Margin="3,0,2,0" VerticalAlignment="Stretch">
+                    <RelativePanel HorizontalAlignment="Left" Margin="507,0,0,0" VerticalAlignment="Stretch" Width="293">
+                        <TextBox x:ConnectionId='22' x:Name="FirstName" Header="First Name" HorizontalAlignment="Left" Text="" VerticalAlignment="Top"  Margin="0,30,0,0" Width="293"/>
+                        <TextBlock x:ConnectionId='23' x:Name="firstName" Foreground="red" RelativePanel.Below="FirstName"/>
+                    </RelativePanel>
+                    <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Center"  Width="293"  Margin="507,0,0,0">
+                        <TextBox x:ConnectionId='20' x:Name="LastName" Margin="0,130,0,0" Header="Last Name" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293"                                   />
+                        <TextBlock x:ConnectionId='21' x:Name="lastName" Foreground="red" RelativePanel.Below="LastName"/>
+                    </RelativePanel>
+                    <TextBox x:ConnectionId='15' x:Name="Avatar"  Header="Avatar Url" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Width="293" Margin="507,236,0,0" />
+                    <Image x:ConnectionId='16' x:Name="ImgAvatar" Source="n" HorizontalAlignment="Left" Margin="0,0,0,-267" Width="263"/>
+                    <TextBlock x:ConnectionId='17' x:Name="avatar"  Foreground="red" HorizontalAlignment="Left" Margin="507,0,0,0" RelativePanel.Below="Avatar"/>
+                    <Button x:ConnectionId='18' Content="Capture"                        Foreground="#FFBF3D00"   Height="38" Margin="10,290,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"  >
+
+                        <Button.Background>
+                            <ImageBrush/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:ConnectionId='19' Content="Choose Avatar"                      Foreground="#FFBF3D00"   Height="38" Margin="130,290,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" >
+                        <Button.Background>
+                            <ImageBrush/>
+                        </Button.Background>
+                    </Button>
+                </RelativePanel>
+                <RelativePanel>
+                </RelativePanel>
+                <RelativePanel HorizontalAlignment="Right">
+                    <TextBox x:ConnectionId='13' x:Name="Phone" Margin="0, 20, 0, 0" Header="Phone Number" HorizontalAlignment="Center" Text="" VerticalAlignment="Top" Width="293"/>
+                    <TextBlock x:ConnectionId='14' x:Name="phone"  Foreground="red" RelativePanel.Below="Phone"/>
+                </RelativePanel>
+                <RelativePanel HorizontalAlignment="Right">
+                    <TextBox x:ConnectionId='11' AcceptsReturn="True" x:Name="Address" Margin="0, 30, 0, 0" Header="Address" HorizontalAlignment="Center" VerticalAlignment="Top" Width="293" Height="100"/>
+                    <TextBlock x:ConnectionId='12' x:Name="address"  Foreground="red" RelativePanel.Below="Address"/>
+                </RelativePanel>
+                <RelativePanel Width="279"  Margin="0, 30, 0, 0">
+                    <TextBlock Text="Gender" HorizontalAlignment="Left" RenderTransformOrigin="2.48,0.35" VerticalAlignment="Stretch"/>
+                </RelativePanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                    <RadioButton x:ConnectionId='8' Content="Male" Tag="1" HorizontalAlignment="Center"                        />
+                    <RadioButton x:ConnectionId='9' Content="Female" Tag="0"                        />
+                    <RadioButton x:ConnectionId='10' Content="Other" Tag="2"                         IsChecked="True"/>
+                </StackPanel>
+                <RelativePanel HorizontalAlignment="Center">
+                    <CalendarDatePicker x:ConnectionId='7' x:Name="BirthDay" Header="Birthday" Margin="0, 30, 0, 0" HorizontalAlignment="Center"                              />
+                </RelativePanel>
+                <RelativePanel HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Stretch" Width="294" >
+                    <Button x:ConnectionId='5' x:Name="Signup" Margin="0,0,-290,0"                         Content="Sign Up" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#33FFFFFF" />
+                    <Button x:ConnectionId='6' x:Name="Login"                  Margin="0,0,0,0" Content="Login" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#33FFFFFF"  />
+                </RelativePanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Frame>
+</Page>
+
